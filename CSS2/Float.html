@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .w-1{
+            width: 25%;
+        }
+        .w-2{
+            width: 50%;
+        }
+        .w-4{
+            width: 20%;
+        }
+        
+        .col{
+            height: 300px;
+        }
+        .bg-dark{
+            background-color: darkblue;
+        }
+        .bg-light{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Column Layouts</h1>
+    <div id="section_1">
+        <h2>This is heading</h2>
+        <hr>
+        <div class="row">
+            <div class="col bg-dark w-4 left"></div>
+            <div class="col bg-light w-4 left"></div>
+            <div class="col bg-dark w-4 left"></div>
+            <div class="col bg-light w-4 left "></div>
+            <div class="col bg-dark w-4 right"></div>
+        </div>
+    </div>
+    <div id="section_2">
+        <h2>This is heading</h2>
+        <hr>
+        <div class="row">
+            <div class="col bg-dark w-1 left"></div>
+            <div class="col bg-light w-1 left"></div>
+            <div class="col bg-dark w-1 left"></div>
+            <div class="col bg-light w-1 right"></div>
+        </div>
+    </div>
+    <div id="section_3">
+        <h2>This is heading</h2>
+        <hr>
+        <div class="row">
+            <div class="col bg-dark w-1 left"></div>
+            <div class="col bg-light w-2 left"></div>
+            <div class="col bg-dark w-1 right"></div>
+        </div>
+    </div>
+    <div id="section_4">
+        <h2>This is heading</h2>
+        <hr>
+        <div class="row">
+            <div class="col bg-dark w-2 left"></div>
+            <div class="col bg-light w-2 right"></div>
+        </div>
+    </div>
+</body>
+</html>

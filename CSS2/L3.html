@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .parent{
+            margin-bottom: 20px;
+        }
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            /* margin: 0; */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        #div_1 {
+            /* background-color: red; */
+            width: 50%;
+            float: left;
+
+
+        }
+
+        #div_2 {
+            /* background-color: seagreen; */
+            width: 50%;
+            float: right;
+        }
+
+        #div_3 {
+            border: 2px solid red;
+        }
+        /* #blank{
+            clear: both;
+        } */
+        
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Font Properties</h1>
+    <h2>This is the heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, possimus nam obcaecati sequi illum nostrum iste sed sit exercitationem porro, ducimus, temporibus accusantium pariatur. Omnis mollitia ex blanditiis optio veritatis.</p> -->
+    <div class="parent">
+        <div id="div_1">
+            <h2>Head 1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa vitae, quasi natus hic ducimus assumenda
+                repellendus ratione totam quis sunt cum blanditiis cumque officiis debitis delectus, maiores ipsum
+                necessitatibus voluptatibus.</p>
+        </div>
+        <div id="div_2">
+            <h2>Head 2</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laboriosam deserunt quisquam numquam
+                cumque, sed tempore harum doloremque explicabo fugiat ipsum eveniet odit reprehenderit debitis error est
+                dolorem nostrum. Vel!</p>
+        </div>
+        <!-- <div id="blank"></div> -->
+    </div>
+    <div id="div_3">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" />
+    </div>
+
+</body>
+
+</html>

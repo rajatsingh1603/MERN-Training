@@ -1,0 +1,33 @@
+body {
+    background: red url("https://cdn.theatlantic.com/thumbor/nn7Ai4go9fBsDFd3V_wuLcd4FD8=/0x0:1920x1080/1600x900/media/img/mt/2015/05/man/original.jpg") no-repeat center / cover fixed;
+
+    margin: 0px;
+}
+
+div {
+    height: 750px;
+    background-size: cover;
+    /* margin-bottom: 400px; */
+    background-attachment: fixed;
+    
+}
+
+#div_1 {
+    background-image: url("https://www.comicbasics.com/wp-content/uploads/2019/08/History-of-Barbara-Gordon.jpg");
+}
+
+#div_2 {
+    background-image: url("https://oyster.ignimgs.com/wordpress/stg.ign.com/2013/11/05-Dick-Grayson.jpg");
+}
+
+#div_3 {
+    background-image: url("https://i.insider.com/589bfcac8275e81e008b4a82?width=1000&format=jpeg&auto=webp");
+}
+
+#div_4 {
+    background-image: url("https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2021/02/13002729/Legion-first-apperance.jpg");
+}
+
+#div_5 {
+    background-image: url("https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/04/Top-DC-Comics-Characters-feature.jpg");
+}

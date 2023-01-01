@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+
+            int main() {
+            
+              int n, reverse = 0, remainder;
+            
+              printf("Enter an integer: ");
+              scanf("%d", &n);
+            
+              while (n != 0) {
+                remainder = n % 10;
+                reverse = reverse * 10 + remainder;
+                n /= 10;
+              }
+            
+              printf("Reversed number = %d", reverse);
+            
+              return 0;
+            }
+    </pre>
+    <hr>
+    <h2>Table</h2>
+    <table border="2" cellpadding="10" cellspacing="10" width="100%">
+        <thead>
+            <tr>
+                <td>This is Head_1</td>
+                <td>This is Head_2</td>
+                <td>This is Head_3</td>
+                <td>This is Head_4</td>
+                <td>This is Head_5</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+            </tr>
+            <tr>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+            </tr>
+            <tr>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+                <td>This is data</td>
+            </tr>
+            
+        </tbody>
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/21aa754e66.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .row:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            background-color: #2874f0;
+            position: fixed;
+            width: 100%;
+            /* left: 0px; */
+            z-index: 1;
+        }
+
+        .container {
+            width: 1140px;
+            /* background-color: red; */
+            margin: 0 auto;
+        }
+
+        .col-1 {
+            width: 55%;
+            padding-top: 10px;
+        }
+
+        .col-2 {
+            width: 38%;
+        }
+
+        #logo {
+            width: 12%;
+        }
+
+        #search {
+            width: 80%;
+            margin-left: 2%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #search input[type="text"] {
+            width: 100%;
+            height: 28px;
+        }
+
+        #search button {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .col-2 > ul > li > a {
+            text-decoration: none;
+            color: white;
+            display: block;
+
+        }
+
+        .col-2 > ul > li {
+            display: inline-block;
+            margin: 0px 15px;
+            text-align: center;
+            /* width: 19%; */
+            padding: 14px 0px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .col-2 > ul > li:first-child {
+            width: 18%;
+            /* position: relative; */
+            /* padding: 12px 0px; */
+        }
+
+        .col-2 > ul > li:first-child span {
+            cursor: pointer;
+            display: block;
+            background-color: #fff;
+            padding: 6px 0px;
+            color: #2874f0;
+        }
+
+        #banner img {
+            width: 100%;
+            max-height: 500px;
+        }
+
+        #section-1,
+        #section-2 {
+            padding: 50px 0px;
+        }
+
+        .product {
+            display: inline-block;
+            width: 18%;
+            text-align: center;
+            border: 1px solid;
+            padding: 35px 8px;
+            position: relative;
+        }
+
+        .product img {
+            width: 100%;
+        }
+
+        #section-1 h2,
+        #section-2 h2 {
+            margin-bottom: 30px;
+        }
+
+        .product .wishlist {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .product .pr-img {
+            /* position: relative; */
+            width: 100%;
+        }
+
+        .product .add-to-cart {
+            position: absolute;
+            top: 40%;
+            left: 0px;
+            width: 100%;
+            display: none;
+        }
+
+        .product .add-to-cart button {
+            border: 1px solid #2874f0;
+            background-color: #2874f0;
+            padding: 10px;
+            color: #fff;
+            width: 100%;
+
+
+        }
+
+        .product:hover .add-to-cart {
+            display: block;
+        }
+
+       .col-2 .dropdown{
+        position: absolute;
+        background-color: #fff;
+        text-align: left;
+        width: 260%;
+        left: -53%;
+        display: none;
+        top: 57px;
+       }
+       .col-2 .dropdown ul li a{
+        padding: 10px;
+        color: black;
+        display: block;
+        border-bottom:1px solid #e0e0e0;
+       }
+       .col-2 .dropdown i{
+        margin-right: 5px;
+        color: #2874f0;
+       }
+       .col-2 .dropdown ul li a:hover{
+        background-color: #F9F9F9;
+       }
+
+       .col-2 ul li:hover .dropdown{
+        display: block;
+       }
+
+       /* creating the arrow for dropdown */
+       .col-2 .dropdown::before{
+            content: "";
+            border: 10px solid red;
+            border-color: transparent transparent white;
+            position: absolute;
+            top: -20px;
+            left: 38%;
+       }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-1 left">
+                    <div class="row">
+                        <div id="logo" class="left">
+                            <a href="#">
+                                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fk-plus_3b0baa.png"
+                                    alt="logo">
+                            </a>
+                        </div>
+                        <div id="search" class="left">
+                            <form action="#">
+                                <input type="text">
+                                <button type="submit">
+                                    <i class="fa-solid fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 right">
+                    <ul>
+                        <li>
+                            <span>Login</span>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="row">
+                                                <div class="left">New Customer</div>
+                                                <div class="right">Sign Up</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            Flipkart Plus zone
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            Orders
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            Wishlist
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            Rewards
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li><a href="#">Became a Seller</a></li>
+                        <li><a href="#">More</a></li>
+                        <li><a href="#"> <i class="fa-solid fa-shopping-cart"></i>Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div id="banner">
+        <img src="https://digiosmosis.com/wp-content/uploads/2020/07/banner-1-1.jpg" alt="">
+    </div>
+
+    <!-- products -->
+    <div id="section-1">
+        <div class="container">
+            <h2>Best of Electronics</h2>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="pr-img">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u3223qe/media-gallery/monitor-u3223qe-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4002&hei=3413&qlt=100,1&resMode=sharp2&size=4002,3413&chrss=full&imwidth=5000"
+                            alt="">
+                        <div class="add-to-cart">
+                            <button>
+                                <i class="fa-solid fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="pr-img">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u3223qe/media-gallery/monitor-u3223qe-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4002&hei=3413&qlt=100,1&resMode=sharp2&size=4002,3413&chrss=full&imwidth=5000"
+                            alt="">
+                        <div class="add-to-cart">
+                            <button>
+                                <i class="fa-solid fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="pr-img">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u3223qe/media-gallery/monitor-u3223qe-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4002&hei=3413&qlt=100,1&resMode=sharp2&size=4002,3413&chrss=full&imwidth=5000"
+                            alt="">
+                        <div class="add-to-cart">
+                            <button>
+                                <i class="fa-solid fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="pr-img">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u3223qe/media-gallery/monitor-u3223qe-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4002&hei=3413&qlt=100,1&resMode=sharp2&size=4002,3413&chrss=full&imwidth=5000"
+                            alt="">
+                        <div class="add-to-cart">
+                            <button>
+                                <i class="fa-solid fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="pr-img">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u3223qe/media-gallery/monitor-u3223qe-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4002&hei=3413&qlt=100,1&resMode=sharp2&size=4002,3413&chrss=full&imwidth=5000"
+                            alt="">
+                        <div class="add-to-cart">
+                            <button>
+                                <i class="fa-solid fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-2">
+        <div class="container">
+            <h2>Best of Music</h2>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div id="pr-img">
+                        <img src="https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg" alt="">
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div id="pr-img">
+                        <img src="https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg" alt="">
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div id="pr-img">
+                        <img src="https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg" alt="">
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div id="pr-img">
+                        <img src="https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg" alt="">
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="#">
+                    <div class="wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div id="pr-img">
+                        <img src="https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg" alt="">
+                    </div>
+                    <div id="pr-desc">
+                        <h4>Monitors</h4>
+                        <span>From 5999</span>
+                        <span>acer</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
